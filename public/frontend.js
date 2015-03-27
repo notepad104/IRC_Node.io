@@ -1,14 +1,14 @@
 //frontend js
-var name = '';
-window.onload = function () {
+
+$(document).ready(function() {	
 	// body...
 	var array = [];	//to store all messages
 	var socket = io.connect('http://localhost:8000');
 	var text = document.getElementById("text");
 	var button = document.getElementById("send");
 	var content = document.getElementById("content");
-//	var online = document.getElementById("online");
-	
+	var name = '';
+	name = prompt("Enter your name: ", name);
 	socket.on('message', function(data){
 		console.log(data.message);
 		if(data.message){
@@ -29,12 +29,10 @@ window.onload = function () {
 			text.value = '';
 	};
 
-	$(document).ready(function() {
-		name = prompt("Enter your name: ", name);
+		//name = prompt("Enter your name: ", name);
 		$("#text").keyup(function(e) {
 			if(e.keyCode == 13) {	
 				sendMessage();
 			}
 		});
-	});
-};
+});
