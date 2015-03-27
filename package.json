@@ -1,0 +1,12 @@
+{
+    "name": "RealTimeChatApplication",
+    "version": "0.0.0",
+    "description": "MEAN.io",
+    "dependencies": {
+        "socket.io": "latest",
+        "express": "latest",
+        "jade": "latest",
+        "ejs": "latest"
+    },
+    "author": "Shubham Aggwarwal"
+}
