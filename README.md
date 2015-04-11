@@ -16,4 +16,4 @@ After installing dependencies run:
 node app.js
 ```
 
-Go to ##localhost:8000
+Go to localhost:8000
